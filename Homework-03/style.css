@@ -1,0 +1,208 @@
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+a {
+     color: black;
+     text-decoration: none;
+}
+
+.text-blue {
+     color: #066ac9;
+}
+
+.text-green {
+     color: #008000;
+}
+
+body{
+     background-color: #faedcd;
+     width: 100vw;
+     height: 100vh;
+     padding: 20px 80px;
+}
+
+.header {
+     display: block;
+     width: 100%;
+     text-align: center;
+}
+
+.img-size {
+     display: block;
+     width: 100%;
+     
+}
+
+.w-300px {
+     width: 300px;
+}
+
+.fs-4rem {
+     font-size: 4rem;
+}
+
+.fs-32px {
+     font-size: 2rem;
+}
+
+.fs-24px {
+     font-size: 24px;
+}
+
+.fs-14px {
+     font-size: 14px; 
+}
+
+
+.text-center {
+     text-align: center;
+}
+
+.text-nowrap {
+     text-wrap: nowrap;
+}
+
+.text-wrap {
+     text-wrap: wrap;
+}
+
+.border-width {
+     border: 4px solid;
+}
+
+.w-350px {
+     width: 350px;
+}
+
+.w-full {
+     width: 100%;
+}
+
+.rounded-top-left {
+     border-top-left-radius: 14px;
+}
+
+.rounded-top-right {
+     border-top-right-radius: 14px;
+}
+
+.px-7px {
+     padding: 0 7px;
+
+}
+
+.px-10px {
+     padding: 0 20px;
+}
+
+.py-16px {
+     padding: 16px 0;
+     
+}
+
+.p-bottom {
+     padding-bottom: 14px;
+}
+
+.rounded-4-values {
+     border-radius: 8px;
+}
+
+.bg-blue {
+     background-color: #066ac9;
+}
+
+.text-yellow {
+     color: #f7c32e;
+}
+
+
+.text-gray {
+     color: rgb(128, 128, 128);
+}
+
+.text-white {
+     color: whitesmoke;
+}
+
+.text-red {
+     color: #ff0000;
+}
+
+.font-weight-500 {
+     font-weight: 500;
+}
+
+.bg-blue-sky {
+     background-color: #a2d2ff6c;
+}
+
+.flex {
+     display: flex;
+}
+
+.flex-row {
+     flex-direction: row;    
+}
+
+.flex-col {
+     flex-direction: column;
+}
+
+.justify-center {
+     justify-content: center;
+}
+
+.justify-between {
+     justify-content: space-between;
+}
+
+.gap-60px {
+     gap: 60px;
+}
+
+
+
+.gap-10px {
+     gap: 10px;
+}
+
+.gap-30px {
+     gap: 30px;
+}
+
+.items-center {
+     align-items: center;
+}
+
+.flex-grow {
+     flex-grow: 0.05;
+}
+
+.flex-wrap {
+     flex-wrap: wrap;
+}
+
+.block {
+     display: block;
+}
+
+.inline-block {
+     display: inline-block;
+}
+
+.float-right {
+     float: right;
+}
+
+.mb-20px {
+   margin-bottom : 20px;
+}
+
+.items-start { 
+     justify-content: flex-start;
+}
