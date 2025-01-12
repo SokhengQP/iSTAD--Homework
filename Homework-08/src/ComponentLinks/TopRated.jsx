@@ -1,10 +1,12 @@
 import Header from "../Home/Header";
 import { useEffect, useState } from 'react';
+
 export default function TopRated() {
      
      const [topRateds, setTopRateds] = useState([]);
      
      useEffect(() => {
+          document.title = 'Top Rated';
                
           fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=995b46c34578880175b2df0cb63164cd')
                .then(resp => {
@@ -24,7 +26,7 @@ export default function TopRated() {
                <div>
                     <h1 data-aos="fade-down" className="text-center text-5xl mt-20 font-[600]">Top Rated Movies</h1>
                     {topRateds.map((items) => {
-                         const { id, backdrop_path, title, release_date  } = items;
+                         const { id, backdrop_path, title, release_date } = items;
                          const url = 'https://image.tmdb.org/t/p/w500/';
                     
                          return (<TopRatedProps key={id} poster_img={url + backdrop_path} title={title} releaseDate={release_date} /> );
@@ -35,8 +37,6 @@ export default function TopRated() {
           </>
      )
 }
-
-
 
 export function TopRatedProps({ poster_img, title, releaseDate }) {
      return (

@@ -6,6 +6,7 @@ export default function Popular() {
      const [users, setUsers] = useState([]);  
      
      useEffect(() => {
+          document.title = 'Popular';
           fetch('https://api.themoviedb.org/3/movie/popular?api_key=995b46c34578880175b2df0cb63164cd')
                .then(resp => {
                     if (!resp.ok) {

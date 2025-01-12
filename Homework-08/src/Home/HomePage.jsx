@@ -1,7 +1,11 @@
+import { useEffect } from "react"
 import Header from "./Header"
 
-
 export default function HomePage() {
+     useEffect(() => {
+          document.title = 'Home Page';
+     }, []);
+     
      return (
           <>
                <Header />
@@ -25,7 +29,7 @@ export default function HomePage() {
                
                </div>
                
-               <img className="h-screen fixed top-0 left-0 w-full -z-10" src="https://img.freepik.com/free-psd/3d-cinema-blank-banner-background_23-2150822400.jpg?t=st=1736588821~exp=1736592421~hmac=bd9e2b25d7e5ec86ce92440f9a9627b48397f939231e2c3ab62a913fd2e2c414&w=1060" alt="movie-together" />
+               <img data-aos="fade-zoom-out" className="h-screen fixed top-0 left-0 w-full -z-10" src="https://img.freepik.com/free-psd/3d-cinema-blank-banner-background_23-2150822400.jpg?t=st=1736588821~exp=1736592421~hmac=bd9e2b25d7e5ec86ce92440f9a9627b48397f939231e2c3ab62a913fd2e2c414&w=1060" alt="movie-together" />
                
                
           </>

@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
 import Header from "../Home/Header";
 import { useEffect, useState } from 'react';
 
@@ -8,6 +7,7 @@ export default function Upcomming() {
      const [upComming, setUpComming] = useState([]);
           
           useEffect(() => {
+          document.title = 'Up comming';
                     
                fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=995b46c34578880175b2df0cb63164cd')
                     .then(resp => {
@@ -26,7 +26,7 @@ export default function Upcomming() {
                <Header />
                
                <div>
-                    <h1 data-aos="fade-down" className="text-center text-5xl mt-20 font-[600]">Upcomming Movies 😍</h1>
+                    <h1 data-aos="fade-down" className="text-center text-5xl mt-20 font-[600]">Upcomming Movies</h1>
                     {upComming.map((items) => {
                          const { id, backdrop_path, title, release_date  } = items;
                          const url = 'https://image.tmdb.org/t/p/w500/';

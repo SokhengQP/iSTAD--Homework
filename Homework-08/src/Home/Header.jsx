@@ -29,7 +29,6 @@ export default function Header() {
                     <BiMenuAltRight onClick={showMenu} size={'24px'} className="md:hidden" />
                </div>
                
-
           </>
      )
 }
