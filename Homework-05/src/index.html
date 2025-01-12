@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8"/>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+     <link href="./output.css" rel="stylesheet">
+     <title>Fetch Data from API</title>
+</head>
+<body>
+     <!-- Container -->
+      <h2 class="text-blue-600">c</h2>
+     <div class="absolute top-0 left-0 grid grid-cols-1 place-items-center h-full w-full gap-2">
+          
+          <!-- Header -->
+          <div class="flex-col flex items-start gap-2 rounded-xl p-4 backdrop-blur-sm">
+          <h1 class="self-center text-[34px]" id="return-error">Employees' Infomation</h1>
+               
+               <div class="flex flex-row justify-between w-[800px]">
+                    <input id="getData" class=" h-10 rounded-3xl outline-none px-4 backdrop-blur-sm bg-transparent border-2 w-[500px] :text-white" type="text" ="Search through ID" placeholder="Enter number between 1-10"/>
+                    <button onclick="fetchData()" class="w-[200px] h-10 border rounded-3xl active:bg-purple-800">Submit</button>
+               </div>
+               <p id="errors" class="text-red-700 font-[600] text-2xl absolute"> </p>
+          </div>
+          
+          <!-- Employee Dashboard -->
+          <div class="w-[100vw] flex justify-evenly items-center backdrop-blur-sm bg-[#4328184b] rounded-3xl">
+               
+               <!-- profile image -->
+                    <div class="mt-[24px] h-[360px] border-none rounded-[50%] flex items-center justify-center">
+                         <img id="user-profile" class="rounded-3xl h-full" src="" alt="profile"/>
+                    </div>
+               
+               <!-- infomation here -->
+               <div class="grid grid-cols-1 rounded-lg px-12 py-4 w-fit gap-4">
+                    
+                    <!-- Name -->
+                    <section class="flex items-center justify-start ">
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-signature"></i>
+                              <p>Name</p>
+                         </div>
+                         
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <input id="human-name" class="h-10 px-4 rounded-3xl bg-[#023047] outline-none" type="text"/>
+                              <input class="h-10 px-4 rounded-3xl bg-[#023047] outline-none" id="huamn-username" type="text"/> 
+                         </div>
+                    </section>
+                    
+                    <!-- username -->
+                    <section class="flex items-center justify-start py-1">
+                         
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-envelope"></i>
+                              <p >Email</p>
+                         </div>
+                         
+                         <div>
+                              <input id="email" class="h-10 px-4 rounded-3xl bg-[#023047] outline-none" type="text" />
+                         </div>
+                    </section>
+                    
+                    <!-- Address -->
+                    <section class="flex justify-start items-center ">
+                         
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-location-dot"></i>
+                              <p class="">Address</p>
+                         </div>
+                         
+                         <div class="flex gap-4">
+                              <input id="streets" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text"  />
+                              <input id="suite" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text"  />
+                              <input id="mycity" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+                              <input id="zipcode" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text"  />
+                         </div>
+                    </section>
+                              
+                    <section class="flex items-center">
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-dungeon"></i>
+                              <p class="w-[180px]">Geo</p>
+                         </div>
+                         <div class="flex gap-4">
+                              <input id="lat" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+                              <input id="lng" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+                         </div>
+                    </section>
+                    
+                    <section class="flex items-center">
+
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-phone"></i>
+                              <p id="phone-number">Phone</p>
+                         </div>
+                         
+                         <input id="ph-numbers" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+          
+                    </section>
+                    
+                    <section class="flex items-center">
+                         
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-earth-americas"></i>
+                              <p>Website</p>
+                         </div>
+                         
+                         <input id="website" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+                    </section>
+                    
+                    <section class="flex items-center">
+                         <div class="flex items-center gap-4 w-[180px]">
+                              <i class="fa-solid fa-building"></i>
+                              <p>Company</p>
+                         </div>
+                         
+                         <div class="flex gap-4">
+                              <input id="name" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text"/>
+                              <input id="catchPhrase" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text"/>
+                              <input id="bs" class="h-10 px-4 rounded-3xl w-[140px] bg-[#023047] outline-none" type="text" />
+                         </div>
+                    </section>
+                    
+                    
+               </div>
+               
+          </div>
+     </div>     
+          
+     
+<script src="app.js"></script>     
+</body>
+</html>
