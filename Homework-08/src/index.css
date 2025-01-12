@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+     font-family: Nunito;
+     font-weight: 500;
+}
+
+#hover-onme, #hover-bort {
+     transition: all .14s linear;
+}
